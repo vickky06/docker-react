@@ -1,4 +1,5 @@
 sude: required
+language: generic 
 services:
   - docker
 
@@ -8,4 +9,4 @@ before_install:
 
 
 script:
-  - docker run vickky06/docker-react npm run test -- --coverage
+  - docker run -e CI=true vickky06/docker-react npm run test -- --coverage
